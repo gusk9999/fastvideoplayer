@@ -134,7 +134,7 @@ class FastVideoPlayerController extends VideoPlayerController {
 
   @override
   Future<void> initialize() async {
-    if (cache && dataSource.startsWith('http')) {
+    if (cache && dataSource.startsWith('https')) {
       final fileInfo = await cacher.getFileFromCache(dataSource);
       await _initializeCachedVideo(fileInfo);
     }
